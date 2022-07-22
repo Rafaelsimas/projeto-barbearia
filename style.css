@@ -1,2 +1,47 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body{
+    min-height: 100vh;
+    background-color: rgb(170, 170, 170);
+    
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: black;
+    color: white;
+       
+}
+header>img{
+   
+    padding-right: 0%;
+    }
+
+header>h1{
+    font-variant: small-caps;
+    text-align: center;
+   
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+header>p{
+    text-align: center;
+    
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+header>nav{
+    padding-top: 3vh ;
+    padding-bottom: 1.8vh;
+
+  
+}
 
 
