@@ -1,102 +1,287 @@
-@charset "UTF-8";
-
-html, body{
-    margin: 0px;
-    padding: 0px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
-body{
-    color: white;    
-    background-color: rgb(170, 170, 170);    
-    font-family: Arial, Helvetica, sans-serif;
+/* ==================== ESTILOS GLOBAIS======================= */
+
+:root {
+  --color-link-menu: #e68a47;
+  --color-bg: ;
 }
 
-.container1{
-    border: 1px yellow solid;
-    background-color: black;
-    color: white;
-    max-height: 220px;
+html{
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
 
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr ;
-    grid-template-rows: 33.3vh 33.3vh 33.3vh ;
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+}
+
+/* ======================SOCIAL-MEDIA=========================== */
+.instagram {
+  color: var(--color-link-menu);
+  font-size: 25px;
+  margin-left: 12px;
+}
+
+/* ==============================MENU======================== */
+
+.topo {
+  background: black;
+  width: 100%;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.caixa {
+  width: 80%;
+  height: 93px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.caixa img {
+  width: 170px;
+}
+
+/* =============menu-itens================================== */
+ul {
+  display: flex;
+}
+
+ul li {
+  margin-left: 15px;
+}
+
+ul li a {
+  color: var(--color-link-menu);
+  transition: 0.3s ease-in-out;
+}
+
+ul li a:hover{
+  color: white;
+}
+
+#main{
+    width: 100vw;
+    height: 100vh;
+}
+
+/* ==============================HOME======================== */
+
+#main{
+  background-image: url('./imagens/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: fixed;
+}
+
+/* ==============================SOBRE NÓS======================== */
+#about{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.titulo-sobre{
+  font-weight: bold;
+  font-size: 6rem;
+  text-align: center;
+  /* margin-top: 3rem; */
+  margin: 6rem 0;
+}
+
+.paragrafo-sobre{
+  padding: 8px;
+  text-align: center;
+  line-height: 30px;
+  letter-spacing: 0.2rem;
+  margin-bottom: 60px;
+}
+
+.proprietario{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.esquerda, .direita{
+  width: 50%;
+}
+
+.direita{
+  background: black;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.esquerda img{
+  width: 100%;
+  height: 410px;
+  object-fit: cover;
+}
+
+.nome-proprietario{
+  margin: 3rem 0;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.descricao{
+  margin-top: 6rem;
+}
+
+/* ====================SERVIÇOS============================== */
+#services{
+  background: rgba(211, 211, 211, 0.116);
+}
+.titulo-servicos{
+  font-weight: bold;
+  font-size: 6rem;
+  text-align: center;
+  /* margin-top: 3rem; */
+  margin: 7rem 0;
+}
+
+.cards{
+
+  width: 80%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  height: 400px;
+  margin-bottom: 30px;
+  
+}
+
+.card{
+  text-align: center;
+  border: 1px solid var(--color-link-menu);
+  background: black;
+  color: var(--color-link-menu);
+  border-radius: 8px;
+  width: 25%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  line-height: 30px;
+  transition: 0.3s ease-in-out;
+}
+
+.card:hover{
+  background: #a8a7a72d;
+  color: black;
+}
+
+.card img {
+  margin-top: 30px;
+  width: 85px;
+  margin-bottom: 60px;
+}
+/* ====================GALERIA============================== */
+#galery{
+  margin-top: 7rem 0;
+background: black;
+color: white;
+display: flex;
+justify-content: center;
+flex-direction: column;
+text-align: center;
+}
+
+.video-galeria{
+  margin-top: 3rem;
+  opacity: 0.3;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+  
+}
+
+.video-galeria:hover{
+  opacity: 0.9;
 
 }
 
+.titulo-galeria{
 
-.cabeca1{
-    border: 1px red solid;
-    max-width:  250px; 
-    max-height: 220px;
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 1;
-    grid-row-end: 2;
-
+  padding: 6rem;
+  font-weight: bold;
+  font-size: 6rem;
+  text-align: center;
+  margin: 8rem  0;
+}
+.galeria{
+text-align: center;
+  margin-inline: auto;
 }
 
-.cabeca2{
-
-    border: 1px blue solid;
-    font-size: 40px;
-    font-variant: small-caps;
-    font-weight: bolder;
-    text-align: center;
-    max-width: 550px;
-    margin: auto;
-    position: relative;
-    top: 50%;
-    padding-bottom: 20px;
-    grid-column-start: 2;
-    grid-column-end: 2; 
-    grid-row-start: 1;   
-    grid-row-end: 1;
+.galeria img{
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  margin: 3px;
+  opacity: 0.5;
+  transition: 0.3s ease-in-out;
+  border: 6px solid lightgray;
 }
 
-
-
-.cabeca3{
-    border: 1px white solid;
-    text-align: center;
-    max-width: 290px;
-    margin: auto;
-    grid-column-start: 2;
-    grid-column-end: 2; 
-    grid-row-start: 2;   
-    grid-row-end: 2;
-    
+.galeria img:hover{
+  opacity: 0.9;
 }
 
-.cabeca4{
-    border: 1px green solid;   
-    max-height: 40px;
-    max-width: 40px;
-    padding-right: 10px;
-    padding-top: 50px;
-    grid-column-start: 3;
-    grid-column-end: 3; 
-    grid-row-start: 1;   
-    grid-row-end: 2;
+.contato-wts {
+  position: absolute;
+  right: 65px;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  bottom: 20px;
 }
 
-.cabeca5{
-    border: 1px rgb(158, 76, 8) solid;
-    max-height: 30px;
-    grid-column-start: 1;
-    grid-column-end: 3; 
-    grid-row-start: 3;   
-    grid-row-end: 3;
+.contato-wts img {
+    width: 33px;
 }
 
-nav{
-    background-color: black;
-    
-    padding:5px 200px ;
+.mapa{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 28px;
 }
 
+.area-mapa, .end-mapa{
+  width: 50%;
+}
 
-    
-    
+.end-mapa{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-
-
+.titulo-contato{
+  font-weight: bold;
+  font-size: 28px;
+}
